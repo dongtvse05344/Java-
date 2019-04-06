@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+tr.highlight {
+    background: #fffffff0;
+}
+
+p.Eventname {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.head {
+    background: #ffffff;
+    z-index: 10000;
+    position: relative;
+    height: 60px;
+    line-height: 60px!important;
+    border-radius: 5px;
+}
+
+.table-rank {
+    background: #000000a8;
+    color: #38ADAE;
+    margin: auto;
+    margin-top: 10px;
+    z-index: 2;
+    text-align: center;
+    border: 1px solid white;
+}

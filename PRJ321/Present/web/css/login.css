@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box-des {
+    padding: 15px 10px;
+    color: #767676;
+}
+
+.box-login {
+    background: white;
+    padding: 15px 20px;
+}
+
+.row.content {
+    padding: 100px 200px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="GetAllAction" class="dongtv.controller.GetAllAction">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="SetFlyFor" class="dongtv.controller.SetFlyFor">
+            <result name="success">setFly.jsp</result>
+        </action>
+        <action name="InsertFlyAction" class="dongtv.controller.InsertFlyAction">
+            <result name="success" type="redirectAction">
+                <param name="ActionName">GetAllAction</param>
+            </result>
+            <result name="input">setFly.jsp</result>
+            <result name="failed">setFly.jsp</result>
+        </action>
+        <action name="CreateAction" class="dongtv.controller.CreateAction">
+            <exception-mapping exception="java.sql.SQLException" result="input"/>
+            <result name="input">create.jsp</result>
+            <result name="success">index.jsp</result>
+            <result name="failed">create.jsp</result>
+        </action>
+        <action name="UpdateAction" class="dongtv.controller.UpdateAction">
+            <result name="input">setFly.jsp</result>
+            <result name="failed">setFly.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="ActionName">GetAllAction</param>
+            </result>
+        </action>
+        <action name="SearchAction" class="dongtv.controller.SearchAction">
+            <result name="input">search.jsp</result>
+            <result name="success">search.jsp</result>
+        </action>
+        <action name="DeleteAction" class="dongtv.controller.DeleteAction">
+            <exception-mapping exception="java.sql.SQLException" result="failed"/>
+            <result name="success"  type="redirectAction">
+                <param name="ActionName">SearchAction</param>
+                <param name="searchName">${searchName}</param>
+            </result>
+            <result name="failed"  type="redirectAction">
+                <param name="ActionName">SearchAction</param>
+                <param name="searchName">${searchName}</param>
+                <param name="errorMess">Delete Fail</param>
+            </result>
+        </action>
+    </package>
+</struts>

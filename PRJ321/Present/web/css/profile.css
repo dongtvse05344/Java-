@@ -1,0 +1,29 @@
+*{
+    margin :0px;
+    padding:0px;
+}
+
+.card.border-info.mb-3 {
+    position: fixed;
+}
+
+i.fa.fa-award {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 100px;
+    color: #fdffa6;
+}
+
+img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card.bg-dark.text-white {
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}

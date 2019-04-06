@@ -1,0 +1,149 @@
+*{
+    margin: 0px;
+    padding :0px;
+    font-family: 'Josefin Slab', serif;
+}
+
+.box-content:hover .line2 {
+    transform: rotate(-30deg);
+}
+
+.line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid #ffffffb0;
+    transition: 0.3s;
+}
+
+.box-content:hover .line1 {
+    transform: rotate(30deg);
+}
+
+p.time-left {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -25px;
+    font-size: 30px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.box-content .btn {
+    position: absolute;
+    bottom: 21%;
+    transition: 0.2s;
+    width: 100px;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.box-content {
+    overflow: hidden;
+    position: relative;
+    border: 5px solid white;
+    padding: 20px 10px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.box-content:hover .time-left {
+    color: #000000;
+    background: #ffffffa6;
+}
+
+.box-content:hover .title {
+    transform: translateY(-25px);
+    color: white!important;
+}
+
+.box-content:hover .btn {
+    transform: translateY(24px);
+}
+
+.box-content a {
+    color: white!important;
+}
+
+.row.content {
+    height: 300px;
+}
+
+.box-content img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.box-content:hover img {
+    transform: scale(1.2);
+}
+
+.box-content .bg {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.box-content:hover .bg {
+    opacity: 1;
+}
+
+.context {
+    margin-top: 20px;
+}
+
+
+
+.box-content .title {
+    transition: 0.3s;
+    position: absolute;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    top: 25%;
+    left: 0;
+}
+
+.tool .btn {
+    margin: 0px 60px;
+    width: 155px;
+    height: 50px;
+}
+
+.col-md-12.tool {
+    padding: 40px 0px;
+}
+
+.BGxam {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #22a3a447;
+}
+
+.banner {
+    background: url(../css/img/banner.jpg);
+    height: 100vh;
+    background-size: cover;
+    padding: 30vh 0px;
+    color: white;
+    position: relative;
+}
+.type-text{
+    color: #ff836e;
+}

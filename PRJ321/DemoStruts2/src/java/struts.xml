@@ -1,0 +1,32 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="LoginAction" class="dongtv.controller.LoginAction">
+            <result name="admin">admin.jsp</result>
+            <result name="user">user</result>
+            <result name="error">error.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+        <action name="SearchAction" class="dongtv.controller.SearchAction">
+            <result name="success">admin.jsp</result>
+            <result name="input">admin.jsp</result>
+        </action>
+        <action name="DeleteAction" class="dongtv.controller.DeleteAction">
+            <result name="success" type="redirectAction">
+                <param name="ActionName">SearchAction</param>
+                <param name="txtSearch">${lastSearchValue}</param>
+            </result>
+            <result name="failed">error.jsp</result>
+        </action>
+        <action name="InsertAction" class="dongtv.controller.InsertAction">
+            <exception-mapping exception="java.sql.SQLException" result="input" />
+            <result name="success">index.jsp</result>
+            <result name="failed">error.jsp</result>
+            <result name="input">insert.jsp</result>
+        </action>
+    </package>
+</struts>
